@@ -29,7 +29,7 @@ namespace GoogleTest
             imageFieldSearch.Click();
 
             var desiredText = driver.FindElement(By.XPath("//a[@href=contains(text(),'harmonyos')]"));
-            Assert.IsTrue(desiredText.Displayed, "eernemnrfe");
+            Assert.IsTrue(desiredText.Displayed, "don't visible element in page");
             
             Screenshot ss = ((ITakesScreenshot)driver).GetScreenshot();
             ss.SaveAsFile("C:\\Users\\Serhii\\source\\repos\\GoogleTest\\Screenshot.png");
