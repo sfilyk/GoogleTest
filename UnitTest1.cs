@@ -1,6 +1,7 @@
 using NUnit.Framework;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
+using System.Drawing;
 
 namespace GoogleTest
 {
@@ -29,11 +30,9 @@ namespace GoogleTest
 
             var desiredText = driver.FindElement(By.XPath("//a[@href=contains(text(),'harmonyos')]"));
             Assert.IsTrue(desiredText.Displayed, "eernemnrfe");
-            //Assert.True(driver.FindElement(By.XPath("//a[@title=contains(text(),'harmonyos')]")).Text.Contains("harmonyos"));
-
-            //var actualProduct = driver.FindElement(_productTitle).Text;
-            //Assert.AreEqual(_expectedProduct, actualProduct, "щось поламалось і ви не увійшли під своїм логіном");
-
+            
+            Screenshot ss = ((ITakesScreenshot)driver).GetScreenshot();
+            ss.SaveAsFile("C:\\Users\\Serhii\\source\\repos\\GoogleTest\\Screenshot.png");
         }
         [TearDown]
         public void TearDown()
