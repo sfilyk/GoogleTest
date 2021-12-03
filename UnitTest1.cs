@@ -32,7 +32,7 @@ namespace GoogleTest
             Assert.IsTrue(desiredText.Displayed, "don't visible element in page");
             
             Screenshot ss = ((ITakesScreenshot)driver).GetScreenshot();
-            ss.SaveAsFile("C:\\Users\\Serhii\\source\\repos\\GoogleTest\\Screenshot.png");
+            ss.SaveAsFile(@"C:\Users\Serhii\source\repos\GoogleTest\Screenshot.png");
         }
         [TearDown]
         public void TearDown()
